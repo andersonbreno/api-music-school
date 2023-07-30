@@ -15,14 +15,6 @@ import music.school.api.endereco.Endereco;
 @EqualsAndHashCode(of = "id") // Gerar o hashcode em cima do id.
 public class Professor {
 
-    public Professor(DadosCadastroProfessor dados) {
-        this.nome = dados.nome();
-        this.email = dados.email();
-        this.telefone = dados.telefone();
-        this.especialidade = dados.especialidade();
-        this.endereco = new Endereco(dados.endereco());
-    }
-
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
@@ -35,6 +27,17 @@ public class Professor {
     @Embedded
     private Endereco endereco;
 
+    private boolean ativo;
+
+    public Professor(DadosCadastroProfessor dados) {
+        this.ativo = true;
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.telefone = dados.telefone();
+        this.especialidade = dados.especialidade();
+        this.endereco = new Endereco(dados.endereco());
+    }
+
     public void atualizarInformacoes(DadosAtualizacaoCadastroProfessor dados) {
         if (dados.nome() != null) {
             this.nome = dados.nome();
@@ -45,6 +48,9 @@ public class Professor {
         if (dados.endereco() != null) {
             this.endereco.atualizarInformacoes(dados.endereco());
         }
+    }
 
+    public void excluir() {
+        this.ativo = false;
     }
 }
