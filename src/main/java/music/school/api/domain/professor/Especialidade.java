@@ -1,4 +1,4 @@
-package music.school.api.professor;
+package music.school.api.domain.professor;
 
 public enum Especialidade {
 

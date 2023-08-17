@@ -1,11 +1,11 @@
-package music.school.api.professor;
+package music.school.api.domain.professor;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import music.school.api.endereco.Endereco;
+import music.school.api.domain.endereco.Endereco;
 
 @Table(name="professores")
 @Entity(name="Professor")
@@ -41,6 +41,9 @@ public class Professor {
     public void atualizarInformacoes(DadosAtualizacaoCadastroProfessor dados) {
         if (dados.nome() != null) {
             this.nome = dados.nome();
+        }
+        if (dados.email() != null) {
+            this.email = dados.email();
         }
         if (dados.telefone() != null) {
             this.telefone = dados.telefone();

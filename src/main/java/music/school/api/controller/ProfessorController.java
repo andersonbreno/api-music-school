@@ -1,7 +1,5 @@
 package music.school.api.controller;
 
-import music.school.api.professor.*;
-
 //import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
+import music.school.api.domain.professor.*;
+
 import org.springframework.web.util.UriComponentsBuilder;
 
 

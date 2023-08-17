@@ -1,6 +1,6 @@
-package music.school.api.professor;
+package music.school.api.domain.professor;
 
-import music.school.api.endereco.Endereco;
+import music.school.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoProfessor(Long id, String nome, String email, String telefone, Especialidade especialidade, Endereco endereco) {
 

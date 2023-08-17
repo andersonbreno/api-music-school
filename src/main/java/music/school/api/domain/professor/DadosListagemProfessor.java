@@ -1,4 +1,4 @@
-package music.school.api.professor;
+package music.school.api.domain.professor;
 
 public record DadosListagemProfessor(Long id, String nome, String email, Especialidade especialidade) {
     

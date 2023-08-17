@@ -1,4 +1,4 @@
-package music.school.api.endereco;
+package music.school.api.domain.endereco;
 
 
 import jakarta.persistence.Embeddable;

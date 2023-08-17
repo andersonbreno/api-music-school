@@ -1,4 +1,4 @@
-package music.school.api.professor;
+package music.school.api.domain.professor;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
